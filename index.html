@@ -106,12 +106,16 @@
             background-color: #ff9800;
         }
 
-        .btn-gallery:hover {
-            background-color: #e68a00;
+        .btn-whatsapp {
+            background-color: #25D366;
+        }
+
+        .btn-map {
+            background-color: #0288d1;
         }
 
         .btn:hover {
-            background-color: #388e3c;
+            opacity: 0.9;
         }
 
         /* Container & Cards */
@@ -151,6 +155,30 @@
         .card p {
             font-size: 14px;
             color: #666;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        th {
+            background-color: #2e7d32;
+            color: white;
+            padding: 12px;
+            font-size: 15px;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
         }
 
         /* Gallery Pop-Up Modal Styling */
@@ -319,7 +347,7 @@
         
         <div class="btn-group">
             <button class="btn btn-gallery" onclick="openGallery()">📸 View Gallery (फोटो गॅलरी)</button>
-            <a href="#contact" class="btn">📩 संपर्क व चौकशी</a>
+            <a href="https://wa.me/919373507350?text=नमस्कार,%20मला%20सेंद्रिय%20उत्पादनांबद्दल%20माहिती%20हवी%20आहे." target="_blank" class="btn btn-whatsapp">💬 WhatsApp वर थेट मागणी करा</a>
         </div>
     </section>
 
@@ -337,6 +365,49 @@
             <p><b>शेताचे नाव:</b> निसर्ग सेंद्रिय शेतफार्म</p>
             <p><b>ठिकाण:</b> बेल्हे, जुन्नर (पुणे)</p>
             <p><b>वैशिष्ट्य:</b> संपूर्ण सेंद्रिय पद्धतीने भाजीपाला आणि फळांचे उत्पादन घेतले जाते.</p>
+            <div style="text-align: center; margin-top: 15px;">
+                <a href="https://maps.google.com" target="_blank" class="btn btn-map">📍 शेताचे लोकेशन (Google Maps)</a>
+            </div>
+        </div>
+
+        <!-- Today's Rates Section -->
+        <h2 class="section-title">📊 आजचे सेंद्रिय बाजारभाव (Organic Rates)</h2>
+        <div style="overflow-x:auto;">
+            <table>
+                <tr>
+                    <th>उत्पादन (Product)</th>
+                    <th>दर (Rate / Kg)</th>
+                    <th>उपलब्धता (Status)</th>
+                </tr>
+                <tr>
+                    <td>सेंद्रिय टोमॅटो</td>
+                    <td>₹४० / किलो</td>
+                    <td style="color:green; font-weight:bold;">उपलब्ध</td>
+                </tr>
+                <tr>
+                    <td>गावरान गवार</td>
+                    <td>₹६० / किलो</td>
+                    <td style="color:green; font-weight:bold;">उपलब्ध</td>
+                </tr>
+                <tr>
+                    <td>शुद्ध गायीचे तूप (A2)</td>
+                    <td>₹१४०० / लिटर</td>
+                    <td style="color:green; font-weight:bold;">उपलब्ध</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Organic Farming Tips for Farmers -->
+        <h2 class="section-title">💡 शेतकऱ्यांसाठी सेंद्रिय मार्गदर्शन (Organic Tips)</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>🧪 जीवामृत निर्मिती</h3>
+                <p>१० लि. गायीचे मलमूत्र + १० कि. शेण + २ कि. गूळ + २ कि. बेसन पीठ २ दिवस सडवून उत्कृष्ट खत बनते.</p>
+            </div>
+            <div class="card">
+                <h3>🍃 निंबोळी अर्क फवारणी</h3>
+                <p>नैसर्गिक कीड नियंत्रणासाठी ५% निंबोळी अर्काची फवारणी पिकांसाठी अत्यंत सुरक्षित ठरते.</p>
+            </div>
         </div>
 
         <!-- Mechanical Engineering Aspect -->
@@ -354,6 +425,12 @@
                 <h3>☀️ Solar Dryer</h3>
                 <p>सेंद्रिय माल दीर्घकाळ टिकवण्यासाठी सौर ऊर्जेचा वापर करून वाळवणारे यंत्र.</p>
             </div>
+        </div>
+
+        <!-- Government Schemes Section -->
+        <h2 class="section-title">🏛️ शासकीय योजना (Govt. Schemes)</h2>
+        <div class="info-box" style="border-left: 5px solid #ff9800;">
+            <p><b>परंपरागत कृषी विकास योजना (PKVY):</b> सेंद्रिय शेतीला प्रोत्साहन देण्यासाठी शासन प्रति हेक्टरी ₹५०,००० चे अनुदान व प्रमाणपत्र (Certification) देते.</p>
         </div>
 
         <!-- Products Section -->
@@ -441,4 +518,4 @@
     </script>
 
 </body>
-    </html>
+</html>
