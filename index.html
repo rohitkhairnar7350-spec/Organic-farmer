@@ -1,152 +1,170 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="mr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Organic Farming CEP - SPPU Student Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Organic Farming Community Project</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
         }
 
         body {
             background-color: #f4f9f4;
             color: #333;
+            line-height: 1.6;
         }
 
-        /* Header */
         header {
-            background-color: #2e7d32;
+            background: #2e7d32;
             color: white;
-            padding: 15px 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 22px 12px;
+        }
+
+        header h1 {
+            font-size: 27px;
+        }
+
+        header p {
+            color: #e8f5e9;
         }
 
         .sppu-badge {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 6px 14px;
+            background: #ffffff30;
+            padding: 5px 14px;
             border-radius: 20px;
-            font-size: 13px;
-            margin-bottom: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-
-        header h1 {
-            font-size: 24px;
-        }
-
-        header p {
-            font-size: 14px;
-            color: #c8e6c9;
-            margin-top: 4px;
-        }
-
-        /* Campus Image Section */
-        .campus-img-container {
-            text-align: center;
-            padding: 15px;
-            background: #ffffff;
-        }
-
-        .campus-img {
-            width: 100%;
-            max-width: 750px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1000');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 26px;
             margin-bottom: 10px;
         }
 
-        /* Hero Buttons */
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 15px;
+        .campus {
+            text-align: center;
+            padding: 15px;
+            background: white;
         }
 
-        .btn {
-            display: inline-block;
-            background-color: #4caf50;
+        .campus img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 55px 15px;
             color: white;
-            padding: 12px 22px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 15px;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-            transition: background 0.3s;
+            background: linear-gradient(#0008, #0008),
+                url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200");
+            background-size: cover;
+            background-position: center;
         }
 
-        .btn-gallery {
-            background-color: #ff9800;
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
         }
 
-        .btn-whatsapp {
-            background-color: #25D366;
-        }
-
-        .btn-map {
-            background-color: #0288d1;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-        }
-
-        /* Container & Cards */
         .container {
+            max-width: 1000px;
             padding: 20px;
-            max-width: 800px;
             margin: auto;
         }
 
         .section-title {
             text-align: center;
             color: #1b5e20;
-            margin: 30px 0 20px 0;
-            font-size: 22px;
+            margin: 30px 0 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            border: none;
+            background: #2e7d32;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 15px;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background: #1b5e20;
+        }
+
+        .btn-orange {
+            background: #ef8d00;
+        }
+
+        .btn-whatsapp {
+            background: #128c4a;
+        }
+
+        .btn-blue {
+            background: #0288d1;
+        }
+
+        .more-info-toggle {
+            display: block;
+            width: 100%;
+            max-width: 600px;
+            margin: 25px auto;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            background: #2e7d32;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .more-info-toggle:hover {
+            background: #1b5e20;
+        }
+
+        #moreFarmingInfo {
+            display: none;
+        }
+
+        #moreFarmingInfo.open {
+            display: block;
+        }
+
+        .info-box {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #00000012;
+        }
+
+        .info-box p {
+            margin-bottom: 8px;
         }
 
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            gap: 18px;
+            margin-bottom: 20px;
         }
 
         .card {
             background: white;
             padding: 20px;
-            border-radius: 10px;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-radius: 10px;
             border-top: 4px solid #4caf50;
+            box-shadow: 0 2px 8px #00000012;
         }
 
         .card h3 {
@@ -156,183 +174,141 @@
 
         .card p {
             font-size: 14px;
-            color: #666;
         }
 
-        /* Table Styling */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        th {
-            background-color: #2e7d32;
-            color: white;
-            padding: 12px;
-            font-size: 15px;
-        }
-
-        td {
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-            font-size: 14px;
-        }
-
-        /* Gallery Pop-Up Modal Styling */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            overflow-y: auto;
-            padding: 40px 15px;
-        }
-
-        .modal-body {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            position: relative;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 32px;
-            font-weight: bold;
-            color: #333;
-            cursor: pointer;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .gallery-card {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-            text-align: center;
-        }
-
-        .gallery-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .gallery-card p {
-            padding: 8px;
-            font-size: 13px;
-            font-weight: bold;
-            color: #2e7d32;
-            background: #f9f9f9;
-        }
-
-        /* Info & CEP Section */
-        .info-box {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            line-height: 1.6;
-        }
-
-        .cep-box {
+        .feature-box {
             background: #e8f5e9;
+            padding: 18px;
+            margin: 15px 0;
             border-left: 5px solid #2e7d32;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
+            border-radius: 8px;
         }
 
-        /* Products List */
+        .weather-note {
+            background: #e3f2fd;
+            padding: 20px;
+            border-left: 5px solid #0288d1;
+            border-radius: 8px;
+        }
+
+        .weather-note ul {
+            padding-left: 22px;
+        }
+
         .products {
-            background-color: #ffffff;
+            background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         .products ul {
-            list-style-type: none;
-            font-size: 16px;
+            list-style: none;
         }
 
         .products li {
-            padding: 10px 0;
-            border-bottom: 1px solid #c8e6c9;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
         }
 
-        /* Contact Section */
         .contact {
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         .contact input,
         .contact textarea {
+            display: block;
             width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact button {
-            width: 100%;
-            background: #2e7d32;
-            color: white;
-            border: none;
             padding: 12px;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 16px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
         }
 
-        /* Team Section */
         .team {
             background: #2e7d32;
             color: white;
-            padding: 20px;
-            border-radius: 10px;
             text-align: center;
+            padding: 22px;
             margin-top: 30px;
+            border-radius: 10px;
         }
 
-        /* Footer */
+        .team h3 {
+            margin-bottom: 10px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            inset: 0;
+            background: #000c;
+            overflow-y: auto;
+            padding: 25px 12px;
+        }
+
+        .modal-body {
+            position: relative;
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            float: right;
+            font-size: 30px;
+            cursor: pointer;
+            color: #333;
+        }
+
         footer {
             background: #1b5e20;
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 18px;
             margin-top: 30px;
-            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
+            }
+
+            .container {
+                padding: 12px;
+            }
+
+            .more-info-toggle {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Header Section -->
+    <!-- HEADER -->
     <header>
         <div class="sppu-badge">
             🎓 Savitribai Phule Pune University (SPPU)
@@ -343,262 +319,702 @@
         <p>Samarth College of Engineering, Belhe | SE Mechanical</p>
     </header>
 
-    <!-- College Campus Photo -->
-    <div class="campus-img-container">
-        <img src="college.jpg"
-             alt="समर्थ शैक्षणिक संकुल, बेल्हे"
-             class="campus-img">
+    <!-- COLLEGE PHOTO -->
+    <div class="campus">
+        <img src="college.jpg" alt="Samarth College of Engineering">
     </div>
 
-    <!-- Hero Banner with Buttons -->
+    <!-- MAIN BANNER -->
     <section class="hero">
         <h2>सेंद्रिय शेती आणि डिजिटल विकास</h2>
 
         <p>विषमुक्त शेती, सुदृढ समुदाय व शाश्वत तंत्रज्ञान</p>
 
-        <div class="btn-group">
+        <br>
 
-            <button class="btn btn-gallery" onclick="openGallery()">
-                📸 View Gallery (फोटो गॅलरी)
-            </button>
+        <button class="btn btn-orange" onclick="openGallery()">
+            📸 फोटो गॅलरी पाहा
+        </button>
 
-            <a href="https://wa.me/919545780913?text=नमस्कार,%20मला%20सेंद्रिय%20उत्पादनांबद्दल%20माहिती%20हवी%20आहे."
-               target="_blank"
-               class="btn btn-whatsapp">
-                💬 WhatsApp वर थेट मागणी करा
-            </a>
-
-        </div>
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/919545780913"
+           target="_blank">
+            💬 WhatsApp वर संपर्क करा
+        </a>
     </section>
 
     <div class="container">
 
-        <!-- CEP Project Aim -->
-        <div class="cep-box">
-            <h3>📌 Community Engagement Project (CEP) Objective:</h3>
+        <!-- ONE BUTTON TO OPEN ALL EXTRA INFORMATION -->
+        <button
+            type="button"
+            class="more-info-toggle"
+            onclick="toggleMoreFarmingInfo()"
+            aria-expanded="false"
+            aria-controls="moreFarmingInfo">
+
+            🌱 शेतीविषयक सर्व माहिती पाहण्यासाठी येथे क्लिक करा ▼
+
+        </button>
+
+        <!-- PROJECT OBJECTIVE -->
+        <div class="feature-box">
+            <h3>📌 Community Engagement Project (CEP) Objective</h3>
 
             <p>
-                स्थानिक सेंद्रिय शेतकऱ्यांना डिजिटल प्लॅटफॉर्म मिळवून देणे,
-                ग्राहकांपर्यंत थेट सेंद्रिय उत्पादने पोहोचवणे आणि
-                सेंद्रिय शेतीतील तंत्रज्ञानाचा प्रसार करणे हा या प्रोजेक्टचा मुख्य उद्देश आहे.
+                स्थानिक सेंद्रिय शेतकऱ्यांना डिजिटल प्लॅटफॉर्म उपलब्ध करून देणे,
+                ग्राहकांपर्यंत सेंद्रिय उत्पादने पोहोचवणे आणि सेंद्रिय शेतीतील
+                तंत्रज्ञानाचा प्रसार करणे हा या प्रोजेक्टचा मुख्य उद्देश आहे.
             </p>
         </div>
 
-        <!-- About Farm Section -->
-        <h2 class="section-title">
-            👨‍🌾 शेताविषयी माहिती (Local Organic Farm)
-        </h2>
+        <!-- FARM INFORMATION -->
+        <h2 class="section-title">👨‍🌾 शेताविषयी माहिती</h2>
 
         <div class="info-box">
             <p><b>शेताचे नाव:</b> निसर्ग सेंद्रिय शेतफार्म</p>
-            <p><b>ठिकाण:</b> बेल्हे, जुन्नर (पुणे)</p>
+            <p><b>ठिकाण:</b> बेल्हे, जुन्नर, पुणे</p>
             <p>
                 <b>वैशिष्ट्य:</b>
-                संपूर्ण सेंद्रिय पद्धतीने भाजीपाला आणि फळांचे उत्पादन घेतले जाते.
+                सेंद्रिय पद्धतीने भाजीपाला आणि फळांचे उत्पादन.
             </p>
 
-            <div style="text-align: center; margin-top: 15px;">
+            <center>
                 <a href="https://maps.google.com"
                    target="_blank"
-                   class="btn btn-map">
-                    📍 शेताचे लोकेशन (Google Maps)
+                   class="btn btn-blue">
+                    📍 Google Maps वर लोकेशन पाहा
                 </a>
-            </div>
+            </center>
         </div>
 
-        <!-- Organic Farming Tips for Farmers -->
-        <h2 class="section-title">
-            💡 शेतकऱ्यांसाठी सेंद्रिय मार्गदर्शन (Organic Tips)
-        </h2>
+        <!-- ALL EXTRA SECTIONS OPEN INSIDE THIS DIV -->
+        <div id="moreFarmingInfo">
 
-        <div class="card-grid">
+            <!-- ORGANIC FARMING -->
+            <h2 class="section-title">
+                🌱 सेंद्रिय शेतीची माहिती
+            </h2>
 
-            <div class="card">
-                <h3>🧪 जीवामृत निर्मिती</h3>
+            <div class="card-grid">
+
+                <div class="card">
+                    <h3>🌿 सेंद्रिय शेती म्हणजे काय?</h3>
+                    <p>
+                        नैसर्गिक खते, पीक फेरपालट, जैविक कीड नियंत्रण आणि
+                        मातीचे आरोग्य जपणाऱ्या पद्धतींचा वापर म्हणजे सेंद्रिय शेती.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🌍 सेंद्रिय शेतीचे फायदे</h3>
+                    <p>
+                        मातीची सुपीकता आणि जैवविविधता टिकवण्यास तसेच
+                        कृत्रिम इनपुटवरील अवलंबित्व कमी करण्यास मदत होते.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🔄 पीक फेरपालट</h3>
+                    <p>
+                        वेगवेगळ्या हंगामांत वेगवेगळी पिके घेतल्याने
+                        मातीचे आरोग्य सुधारण्यास मदत होऊ शकते.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- ORGANIC FERTILIZERS -->
+            <h2 class="section-title">
+                🪱 सेंद्रिय खतांचे प्रकार
+            </h2>
+
+            <div class="card-grid">
+
+                <div class="card">
+                    <h3>🪱 गांडूळखत</h3>
+                    <p>
+                        गांडुळांच्या मदतीने सेंद्रिय पदार्थ कुजवून
+                        गांडूळखत तयार केले जाते.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🐄 शेणखत</h3>
+                    <p>
+                        योग्य प्रकारे कुजवलेले शेणखत मातीमध्ये
+                        सेंद्रिय पदार्थ वाढवण्यास मदत करते.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🍂 कंपोस्ट खत</h3>
+                    <p>
+                        सुकी पाने आणि योग्य सेंद्रिय कचरा कुजवून
+                        कंपोस्ट खत तयार केले जाते.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🌿 जीवामृत</h3>
+                    <p>
+                        काही शेतकरी मातीतील सूक्ष्मजीव क्रियेला
+                        प्रोत्साहन देण्यासाठी जीवामृत वापरतात.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- PEST MANAGEMENT -->
+            <h2 class="section-title">
+                🐛 कीड व रोग व्यवस्थापन
+            </h2>
+
+            <div class="card-grid">
+
+                <div class="card">
+                    <h3>🍃 निंबोळी अर्क</h3>
+                    <p>
+                        निंबोळी-आधारित उत्पादने काही किडींच्या
+                        व्यवस्थापनासाठी वापरली जातात.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🟨 चिकट सापळे</h3>
+                    <p>
+                        पिवळे किंवा निळे चिकट सापळे काही किडींचे
+                        निरीक्षण करण्यासाठी उपयोगी ठरतात.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🌱 पीक निरीक्षण</h3>
+                    <p>
+                        पानांवरील डाग, किडी आणि पिकातील बदल नियमित
+                        तपासल्यास समस्या लवकर ओळखता येतात.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="feature-box">
+                <h3>⚠️ महत्त्वाची सूचना</h3>
                 <p>
-                    १० लि. गायीचे मलमूत्र + १० कि. शेण + २ कि. गूळ +
-                    २ कि. बेसन पीठ २ दिवस सडवून उत्कृष्ट खत बनते.
+                    कीड किंवा रोगाची योग्य ओळख केल्याशिवाय कोणतेही
+                    औषध फवारू नका. कृषी तज्ज्ञांचा सल्ला घ्या.
                 </p>
             </div>
 
-            <div class="card">
-                <h3>🍃 निंबोळी अर्क फवारणी</h3>
+            <!-- WEATHER INFORMATION -->
+            <h2 class="section-title">
+                🌦️ हवामान व शेती मार्गदर्शन
+            </h2>
+
+            <div class="weather-note">
+                <h3>🌤️ हवामानानुसार शेतीची काळजी</h3>
+
+                <ul>
+                    <li>
+                        <b>पाऊस:</b>
+                        पावसाची शक्यता तपासून फवारणीचे नियोजन करा.
+                    </li>
+
+                    <li>
+                        <b>उष्ण हवामान:</b>
+                        मातीतील ओलावा पाहून सिंचनाचे नियोजन करा.
+                    </li>
+
+                    <li>
+                        <b>जोरदार पाऊस:</b>
+                        शेतात पाणी साचू नये म्हणून निचऱ्याची व्यवस्था करा.
+                    </li>
+
+                    <li>
+                        <b>फवारणी:</b>
+                        वारा आणि पावसाची शक्यता तपासा.
+                    </li>
+                </ul>
+
                 <p>
-                    नैसर्गिक कीड नियंत्रणासाठी ५% निंबोळी अर्काची
-                    फवारणी पिकांसाठी अत्यंत सुरक्षित ठरते.
+                    <b>टीप:</b> हा विभाग सामान्य मार्गदर्शनासाठी आहे.
+                    येथे लाइव्ह हवामान डेटा दाखवला जात नाही.
                 </p>
+            </div>
+
+            <!-- ORGANIC FARMING TIPS -->
+            <h2 class="section-title">
+                💡 शेतकऱ्यांसाठी सेंद्रिय मार्गदर्शन
+            </h2>
+
+            <div class="card-grid">
+
+                <div class="card">
+                    <h3>🌿 सेंद्रिय खत</h3>
+                    <p>
+                        पिकासाठी योग्य खत निवडताना माती परीक्षण
+                        आणि कृषी तज्ज्ञांचा सल्ला घ्या.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🍃 नैसर्गिक कीड नियंत्रण</h3>
+                    <p>
+                        योग्य पीक निरीक्षण, स्वच्छता आणि
+                        पिकानुसार जैविक उपायांचा वापर करा.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- MECHANICAL ENGINEERING -->
+            <h2 class="section-title">
+                ⚙️ Mechanical Engineering in Organic Farming
+            </h2>
+
+            <div class="card-grid">
+
+                <div class="card">
+                    <h3>🚜 Solar Sprayer</h3>
+                    <p>
+                        सौर ऊर्जेवर चालणारा फवारणी पंप
+                        ऊर्जा वापर कमी करण्यास मदत करू शकतो.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🍂 Compost Shredder</h3>
+                    <p>
+                        सेंद्रिय अवशेष बारीक करण्यासाठी
+                        वापरले जाणारे यंत्र.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>☀️ Solar Dryer</h3>
+                    <p>
+                        सौर ऊर्जेचा वापर करून शेतीमाल वाळवण्यासाठी
+                        वापरले जाणारे यंत्र.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- GOVERNMENT SCHEMES -->
+            <h2 class="section-title">
+                🏛️ शासकीय योजना
+            </h2>
+
+            <div class="info-box">
+                <h3>परंपरागत कृषी विकास योजना (PKVY)</h3>
+
+                <p>
+                    या योजनेचा उद्देश सेंद्रिय शेतीला प्रोत्साहन देणे
+                    हा आहे. पात्रता, अनुदानाची रक्कम आणि अटी
+                    वेळोवेळी बदलू शकतात. अद्ययावत माहितीसाठी
+                    कृषी विभागाशी संपर्क साधा.
+                </p>
+            </div>
+
+            <!-- ORGANIC VS CHEMICAL FARMING -->
+            <h2 class="section-title">
+                ⚖️ सेंद्रिय व रासायनिक शेतीतील फरक
+            </h2>
+
+            <div class="info-box">
+                <p>
+                    <b>सेंद्रिय शेती:</b>
+                    कंपोस्ट, शेणखत, पीक फेरपालट आणि जैविक उपायांवर भर.
+                </p>
+
+                <p>
+                    <b>रासायनिक शेती:</b>
+                    पिकांच्या गरजेनुसार कृत्रिम खते किंवा
+                    कीटकनाशके वापरली जाऊ शकतात.
+                </p>
+
+                <p>
+                    कोणतीही पद्धत निवडताना मातीची तपासणी,
+                    पिकाचा प्रकार आणि कृषी तज्ज्ञांचा सल्ला महत्त्वाचा आहे.
+                </p>
+            </div>
+
+            <!-- WATER CONSERVATION -->
+            <h2 class="section-title">
+                💧 पाणी संवर्धन
+            </h2>
+
+            <div class="card-grid">
+
+                <div class="card">
+                    <h3>💧 ठिबक सिंचन</h3>
+                    <p>
+                        पिकांच्या मुळांजवळ पाणी पोहोचवून
+                        पाण्याचा कार्यक्षम वापर करण्यास मदत होते.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🌧️ पावसाचे पाणी</h3>
+                    <p>
+                        पावसाचे पाणी साठवून त्याचा वापर
+                        स्थानिक परिस्थितीनुसार करता येतो.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🍂 आच्छादन</h3>
+                    <p>
+                        मातीवर आच्छादन केल्याने ओलावा टिकवण्यास
+                        मदत होऊ शकते.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- CROP CALENDAR -->
+            <h2 class="section-title">
+                🗓️ पीक दिनदर्शिका
+            </h2>
+
+            <div class="info-box">
+                <p>
+                    पीक पेरणीचा काळ प्रदेश, पाऊस, माती आणि
+                    पाण्याच्या उपलब्धतेनुसार बदलतो.
+                    पेरणीपूर्वी स्थानिक कृषी विभागाचा हंगामनिहाय
+                    सल्ला घ्या.
+                </p>
+            </div>
+
+            <!-- SOIL TESTING -->
+            <h2 class="section-title">
+                🧪 मातीची तपासणी
+            </h2>
+
+            <div class="info-box">
+                <p>
+                    माती परीक्षणामुळे pH आणि पोषक घटकांची माहिती मिळते.
+                    मातीचा नमुना योग्य पद्धतीने घेऊन जवळच्या
+                    माती परीक्षण प्रयोगशाळेत तपासणी करा.
+                    अहवालानुसार खत व्यवस्थापन ठरवा.
+                </p>
+            </div>
+
+            <!-- COMPOST GUIDE -->
+            <h2 class="section-title">
+                ♻️ कंपोस्ट तयार करण्याची पद्धत
+            </h2>
+
+            <div class="info-box">
+                <ol>
+                    <li>सुकी पाने आणि योग्य सेंद्रिय अवशेष गोळा करा.</li>
+                    <li>सेंद्रिय पदार्थ थरांमध्ये ठेवा.</li>
+                    <li>योग्य प्रमाणात ओलावा राखा.</li>
+                    <li>कुजण्याच्या प्रक्रियेत वेळोवेळी उलथापालथ करा.</li>
+                    <li>पूर्ण कुजलेले कंपोस्ट वापरा.</li>
+                </ol>
+
+                <p>
+                    प्लास्टिक, रसायनांनी दूषित किंवा रोगट कचरा
+                    कंपोस्टमध्ये मिसळू नका.
+                </p>
+            </div>
+
+            <!-- FAQ -->
+            <h2 class="section-title">
+                ❓ वारंवार विचारले जाणारे प्रश्न (FAQ)
+            </h2>
+
+            <div class="info-box">
+                <p>
+                    <b>प्र. सेंद्रिय शेती सुरू कशी करावी?</b><br>
+                    माती परीक्षण करा, लहान क्षेत्रावर सुरुवात करा
+                    आणि कृषी तज्ज्ञांचे मार्गदर्शन घ्या.
+                </p>
+
+                <p>
+                    <b>प्र. सेंद्रिय खत किती वापरावे?</b><br>
+                    पिकाचा प्रकार आणि माती परीक्षण अहवालानुसार
+                    खताचे प्रमाण ठरवा.
+                </p>
+
+                <p>
+                    <b>प्र. कीड दिसल्यास काय करावे?</b><br>
+                    कीड ओळखा आणि योग्य उपायासाठी कृषी तज्ज्ञांचा सल्ला घ्या.
+                </p>
+            </div>
+
+            <!-- FARMER FEEDBACK -->
+            <h2 class="section-title">
+                📝 शेतकरी अभिप्राय व सूचना
+            </h2>
+
+            <div class="info-box">
+                <form onsubmit="submitFarmerFeedback(event)">
+
+                    <label for="feedbackName">
+                        नाव (ऐच्छिक):
+                    </label>
+
+                    <input
+                        id="feedbackName"
+                        type="text"
+                        placeholder="तुमचे नाव"
+                        style="width:100%;padding:10px;margin:8px 0;">
+
+                    <label for="feedbackText">
+                        अभिप्राय / सूचना:
+                    </label>
+
+                    <textarea
+                        id="feedbackText"
+                        rows="4"
+                        required
+                        placeholder="तुमच्या सूचना येथे लिहा"
+                        style="width:100%;padding:10px;margin:8px 0;"></textarea>
+
+                    <button type="submit" class="btn">
+                        अभिप्राय दाखवा
+                    </button>
+
+                </form>
+
+                <p id="feedbackMessage" aria-live="polite"></p>
+
+                <small>
+                    टीप: हा फॉर्म अभिप्राय याच पेजवर दाखवतो.
+                    तो डेटाबेसमध्ये सेव्ह करत नाही.
+                </small>
             </div>
 
         </div>
+        <!-- END OF EXTRA INFORMATION -->
 
-        <!-- Mechanical Engineering Aspect -->
+        <!-- PEST AND DISEASE WHATSAPP -->
         <h2 class="section-title">
-            ⚙️ Mechanical Engineering in Organic Farming
+            🐛 पिकांवरील रोग व कीड व्यवस्थापन
         </h2>
 
-        <div class="card-grid">
-
-            <div class="card" style="border-top-color: #0288d1;">
-                <h3>🚜 Solar Sprayer</h3>
-                <p>सौर ऊर्जेवर चालणारा सेंद्रिय औषध फवारणी पंप (Zero Pollution).</p>
-            </div>
-
-            <div class="card" style="border-top-color: #0288d1;">
-                <h3>🍂 Compost Shredder</h3>
-                <p>
-                    शेतातील कचऱ्यापासून गांडूळ खत बनवण्यासाठी
-                    पालापाचोळा बारीक करणारे मशीन.
-                </p>
-            </div>
-
-            <div class="card" style="border-top-color: #0288d1;">
-                <h3>☀️ Solar Dryer</h3>
-                <p>
-                    सेंद्रिय माल दीर्घकाळ टिकवण्यासाठी सौर ऊर्जेचा
-                    वापर करून वाळवणारे यंत्र.
-                </p>
-            </div>
-
-        </div>
-
-        
-
-        <!-- Pest & Disease Helpline Section -->
-        <h2 class="section-title">
-            🐛 पिकांवरील रोग ओळखा व सेंद्रिय उपाय मिळवा
-        </h2>
-
-        <div class="info-box"
-             style="text-align: center; border: 2px dashed #2e7d32; background: #f1f8e9;">
-
+        <div class="info-box" style="text-align:center;">
             <h3>📸 पिकाच्या रोगाचा फोटो पाठवा</h3>
 
-            <p style="margin: 10px 0; font-size: 14px; color: #555;">
-                तुमच्या पिकावर कीड किंवा रोग पडला आहे का?
-                पिकाच्या प्रभावित भागाचा फोटो काढा आणि खालील बटणावर
-                क्लिक करून थेट WhatsApp वर पाठवा.
-                तुम्हाला त्वरित सेंद्रिय उपायांची माहिती दिली जाईल.
+            <p>
+                पिकावरील कीड किंवा रोगाची समस्या असल्यास
+                फोटो आणि माहिती कृषी तज्ज्ञांना दाखवा.
             </p>
 
-            <a href="https://wa.me/919545780913?text=नमस्कार,%20माझ्या%20पिकावर%20रोग/कीड%20पडली%20आहे.%20मी%20फोटो%20पाठवत%20आहे,%20कृपया%20सेंद्रिय%20उपाय%20सांगा."
-               target="_blank"
-               class="btn"
-               style="background-color: #0288d1; text-decoration: none; display: inline-block; margin-top: 10px;">
-                📸 रोगाचा फोटो WhatsApp वर पाठवा
-            </a>
+            <a
+                href="https://wa.me/919545780913"
+                target="_blank"
+                class="btn btn-whatsapp">
 
+                📱 WhatsApp वर संपर्क करा
+
+            </a>
         </div>
 
-        <!-- Products Section -->
+        <!-- PRODUCTS -->
         <h2 class="section-title">
-            🥦 उपलब्ध सेंद्रिय माल (Products)
+            🥦 उपलब्ध सेंद्रिय उत्पादने
         </h2>
 
         <div class="products">
             <ul>
-                <li>🥦 ताजी सेंद्रिय भाजीपाला (Organic Vegetables)</li>
-                <li>🍎 रासायनिक खतमुक्त फळे (Fresh Fruits)</li>
-                <li>🌾 गावरान धान्य आणि डाळी (Natural Grains)</li>
-                <li>🥛 शुद्ध देशी गायीचे दूध व तूप (A2 Milk & Ghee)</li>
+                <li>🥦 ताजी सेंद्रिय भाजीपाला</li>
+                <li>🍎 ताजी फळे</li>
+                <li>🌾 गावरान धान्य आणि डाळी</li>
+                <li>🥛 दूध व दुग्धजन्य पदार्थ</li>
             </ul>
         </div>
 
-        <!-- Contact Form -->
+        <!-- CONTACT FORM -->
         <h2 class="section-title">
             📩 संपर्क व मागणी फॉर्म
         </h2>
 
-        <div class="contact" id="contact">
-            <form action="#">
-                <input type="text" placeholder="तुमचे नाव (Name)" required>
+        <div class="contact">
+            <form onsubmit="submitContact(event)">
 
-                <input type="text" placeholder="मोबाईल नंबर (Phone)" required>
+                <input
+                    type="text"
+                    id="contactName"
+                    placeholder="तुमचे नाव"
+                    required>
 
-                <textarea rows="3"
-                          placeholder="तुम्हाला कोणती सेंद्रिय उत्पादने हवी आहेत?"></textarea>
+                <input
+                    type="tel"
+                    id="contactPhone"
+                    placeholder="मोबाईल नंबर"
+                    required>
 
-                <button type="submit">Submit (पाठवा)</button>
+                <textarea
+                    id="contactMessage"
+                    rows="4"
+                    placeholder="तुम्हाला कोणती उत्पादने हवी आहेत?"
+                    required></textarea>
+
+                <button type="submit" class="btn">
+                    Submit (पाठवा)
+                </button>
+
             </form>
+
+            <p id="contactResult" aria-live="polite"></p>
         </div>
 
-        <!-- Project Team Details -->
-<div class="team">
-    <h3>👨‍💻 प्रोजेक्ट सादरकर्ते (Student Team)</h3>
+        <!-- STUDENT TEAM -->
+        <div class="team">
+            <h3>👨‍💻 प्रोजेक्ट सादरकर्ते (Student Team)</h3>
 
-    <p><b>१.</b> खैरणार रोहित रविंद्र</p>
-    <p><b>२.</b> नाईकवाडी शुभम विठ्ठल</p>
-    <p><b>३.</b> धामधरे प्रज्वल ज्ञानेश्वर</p>
-    <p><b>४.</b> कोटकर अनिकेत सवलेराम</p>
+            <p><b>विद्यार्थी १:</b> खैरणार रोहित रविंद्र</p>
+            <p><b>विद्यार्थी २:</b> नाईकवाडी शुभम विठ्ठल</p>
+            <p><b>विद्यार्थी ३:</b> धामधरे प्रज्वल ज्ञानेश्वर</p>
+            <p><b>विद्यार्थी ४:</b> कोटकर अनिकेत सवलेराम</p>
 
-    <p><b>शाखा:</b> SE Mechanical Engineering</p>
-    <p><b>विषय:</b> Community Engagement Project (CEP - Topic 15)</p>
-    <p><b>कॉलेज:</b> Samarth College of Engineering, Belhe</p>
-</div>
+            <p><b>शाखा:</b> SE Mechanical Engineering</p>
+
+            <p>
+                <b>विषय:</b>
+                Community Engagement Project (CEP - Topic 15)
+            </p>
+
+            <p>
+                <b>कॉलेज:</b>
+                Samarth College of Engineering, Belhe
+            </p>
+        </div>
 
     </div>
 
-    <!-- Photo Gallery Modal (Pop-up Window) -->
+    <!-- PHOTO GALLERY POPUP -->
     <div id="galleryModal" class="modal">
 
         <div class="modal-body">
 
-            <span class="close-btn" onclick="closeGallery()">&times;</span>
+            <span class="close-btn" onclick="closeGallery()">
+                &times;
+            </span>
 
-            <h2 style="text-align: center; color: #1b5e20;">
+            <h2 class="section-title">
                 📸 शेत भेट आणि फोटो गॅलरी
             </h2>
 
-            <p style="text-align: center; font-size: 13px; color: #666; margin-bottom: 15px;">
-                Field Visit Photos
-            </p>
-
             <div class="gallery-grid">
 
-                <!-- फोटो १ -->
-                <div class="gallery-card">
-                    <img src="farm1.jpg" alt="शेतातील फोटो १">
+                <div>
+                    <img src="farm1.jpg" alt="सेंद्रिय शेती">
                     <p>🌿 सेंद्रिय पिके व पाहणी</p>
                 </div>
 
-                <!-- फोटो २ -->
-                <div class="gallery-card">
-                    <img src="farm2.jpg" alt="शेतातील फोटो २">
-                    <p>🪱 गांडूळ खत व निर्मिती</p>
+                <div>
+                    <img src="farm2.jpg" alt="गांडूळ खत">
+                    <p>🪱 गांडूळ खत निर्मिती</p>
                 </div>
 
-                <!-- फोटो ३ -->
-                <div class="gallery-card">
-                    <img src="farm3.jpg" alt="शेतातील फोटो ३">
+                <div>
+                    <img src="farm3.jpg" alt="शेतकरी भेट">
                     <p>👨‍🌾 शेतकऱ्यांशी चर्चा</p>
                 </div>
 
             </div>
+
         </div>
+
     </div>
 
-    <!-- Footer Section -->
+    <!-- FOOTER -->
     <footer>
-        <p>© SPPU CEP Project | Samarth College of Engineering, Belhe</p>
+        <p>
+            © SPPU CEP Project |
+            Samarth College of Engineering, Belhe
+        </p>
     </footer>
 
-    <!-- JavaScript For Gallery Pop-up -->
+    <!-- JAVASCRIPT -->
     <script>
-        function openGallery() {
-            document.getElementById("galleryModal").style.display = "block";
-        }
 
-        function closeGallery() {
-            document.getElementById("galleryModal").style.display = "none";
-        }
+        // OPEN OR CLOSE ALL FARMING INFORMATION
+        function toggleMoreFarmingInfo() {
 
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            var modal = document.getElementById("galleryModal");
+            const panel = document.getElementById("moreFarmingInfo");
 
-            if (event.target == modal) {
-                modal.style.display = "none";
+            const button = document.querySelector(".more-info-toggle");
+
+            const isOpen = panel.classList.toggle("open");
+
+            button.setAttribute("aria-expanded", String(isOpen));
+
+            button.innerHTML = isOpen
+                ? "🌱 शेतीविषयक सर्व माहिती लपवा ▲"
+                : "🌱 शेतीविषयक सर्व माहिती पाहण्यासाठी येथे क्लिक करा ▼";
+
+            if (isOpen) {
+                panel.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
             }
         }
+
+        // OPEN PHOTO GALLERY
+        function openGallery() {
+
+            document.getElementById("galleryModal").style.display = "block";
+
+        }
+
+        // CLOSE PHOTO GALLERY
+        function closeGallery() {
+
+            document.getElementById("galleryModal").style.display = "none";
+
+        }
+
+        // CLOSE GALLERY WHEN CLICKING OUTSIDE
+        window.addEventListener("click", function(event) {
+
+            const modal = document.getElementById("galleryModal");
+
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+
+        });
+
+        // DISPLAY FARMER FEEDBACK ON THE PAGE
+        function submitFarmerFeedback(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("feedbackName").value.trim();
+
+            const feedback = document.getElementById("feedbackText").value.trim();
+
+            const message = name
+                ? name + " यांचा अभिप्राय: " + feedback
+                : "तुमचा अभिप्राय: " + feedback;
+
+            document.getElementById("feedbackMessage").textContent = message;
+
+            event.target.reset();
+
+        }
+
+        // CONTACT FORM DEMO
+        function submitContact(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("contactName").value.trim();
+
+            document.getElementById("contactResult").textContent =
+                "धन्यवाद " + name +
+                "! तुमची माहिती या पेजवर स्वीकारली आहे. हा डेमो फॉर्म आहे; माहिती डेटाबेसमध्ये सेव्ह होत नाही.";
+
+            event.target.reset();
+
+        }
+
     </script>
 
 </body>
